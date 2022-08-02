@@ -18,18 +18,30 @@ toc: no
 
 </div>
 
-<div id="teamfight-tactics" class="section level1">
-<h1>Teamfight Tactics</h1>
+<div id="teamfight-tactics" class="section level2">
+<h2>Teamfight Tactics</h2>
 <!-- toc -->
 <p>Teamfight tactics is an auto battler game. You play as a “tiny titan” who builds a team of champions to fight on their bidding in a round robin against 7 other players. Each time you lose a battle your titan takes some damage until eventually you are eliminated. If you are the last titan standing then you win the round.</p>
 <p>Central building an army are synergies. All of the champions you can choose from have two or three “traits”. Putting champions that share a trait together will give you a bonus. Some traits require only a single champion to become active, but most activate, and then power up at set numbers of champions such as 3,5, and 7. For example if you have</p>
-<p>While this gives a brief overview, there are certainly better explanations than this online, but the best way to understand it is to play the game yourself. It will be difficult to appreciate the content in the blogpost if you have never played TFT.</p>
-<div id="section" class="section level2">
-<h2></h2>
-<pre class="python"><code>x = [1,2,3,4,5]
-import sys
-
-print(x)</code></pre>
-<p>[1, 2, 3, 4, 5]</p>
+<p>While this gives a brief overview, there are certainly better explanations than this online, but the best way to understand it is to play the game yourself. It will be difficult to appreciate the content in the blog post if you have never played TFT however I will attempt to clarify some terms to make it easier.</p>
+<p>In this program I have written a script that when run will suggest a team composition that can satisfy various constraints, such as not having “hanging traits”, having a certain combination of traits, maximizing the price of your team while having no active traits and so on based on a data input file.</p>
+<p>We can also consider augments and spatula items that</p>
 </div>
+<div id="mixed-integer-linear-programming" class="section level2">
+<h2>Mixed Integer Linear Programming</h2>
+<p>We describe this problem as a mixed integer linear program that is modeled in the python-mip library. This library helps formulate mixed integer programs for the free solver CBC. Using Python is also helpful as its</p>
+<p>In mixed integer programming we model a problem as an objective to minimise (or maximise) and a set of constraints. For our mixed integer linear program, we have</p>
+<p>We begin with loading in the data and the packages and creating a model object.
+The data contains each</p>
+<pre class="python"><code>from mip import *
+import json
+
+with open(&quot;./data/set_7/set_7_data.json&quot;, &quot;r&quot;) as f:
+    data = json.loads(f.read())
+    
+data[&quot;trait_levels&quot;] = list(map(tuple, data[&quot;trait_levels&quot;]))
+
+model = Model(solver_name=CBC)
+model.verbose = 0
+</code></pre>
 </div>
