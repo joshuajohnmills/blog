@@ -1,5 +1,5 @@
 theme: "harbor"
-baseURL: http://joshmills.blog/
+baseURL: https://joshmills.blog/
 languageCode: en-us
 title: Josh M's Blog
 params:
