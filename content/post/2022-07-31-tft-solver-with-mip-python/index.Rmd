@@ -1,0 +1,31 @@
+---
+title: Teamfight Tactics solved as a MIP with mip-python
+author: Josh M
+date: '2022-07-31'
+slug: []
+categories:
+  - Python
+  - Optimisation
+tags:
+  - ''
+backtotop: no
+draft: no
+toc: no
+---
+
+#Teamfight Tactics
+
+<!-- toc -->
+
+Teamfight tactics is an auto battler game. You play as a "tiny titan" who builds a team of champions to fight on their bidding in a round robin against 7 other players. Each time you lose a battle your titan takes some damage until eventually you are eliminated. If you are the last titan standing then you win the round.
+
+Central building an army are synergies. All of the champions you can choose from have two or three "traits". Putting champions that share a trait together will give you a bonus. Some traits require only a single champion to become active, while others activate at 2 or 3. 
+
+## 
+```{python python.reticulate = FALSE,results ='asis'}
+x = [1,2,3,4,5]
+import sys
+
+print(x)
+```
+

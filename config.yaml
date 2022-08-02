@@ -1,43 +1,14 @@
-baseurl: /
+theme: "harbor"
+baseURL: http://example.org/
 languageCode: en-us
-title: A Hugo website
-theme: hugo-lithium
-googleAnalytics: ''
-disqusShortname: ''
-ignoreFiles:
-  - \.Rmd$
-  - \.Rmarkdown$
-  - _cache$
-  - \.knit\.md$
-  - \.utf8\.md$
-permalinks:
-  post: /:year/:month/:day/:slug/
-menu:
-  main:
-    - name: About
-      url: /about/
-    - name: GitHub
-      url: https://github.com/rstudio/blogdown
-    - name: Twitter
-      url: https://twitter.com/rstudio
+title: Josh M's Blog
 params:
-  MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
-  MathJaxVersion: 2.7.5
-  description: A website built through Hugo and blogdown.
-  favicon: favicon.ico
-  highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
-  highlightjsLang:
-    - r
-    - yaml
-  highlightjsTheme: github
-  highlightjsVersion: 9.12.0
+  social:
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/joshuajohnmills/
+      icon: <i class="fa-brands fa-linkedin"></i>
   logo:
-    alt: Logo
-    height: 50
-    url: logo.png
+    url: icon.png
     width: 50
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    renderer:
-      unsafe: yes
+    height: 50
+    alt: Logo
